@@ -1,0 +1,1587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#E4E4E4">
+
+        <EditText
+            android:id="@+id/edittextSearch"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="60dp"
+            android:background="#E4E4E4"
+            android:drawableStart="@drawable/ic_search_30x30"
+            android:drawableEnd="@drawable/ic_voice_30x30"
+            android:hint="Search for App and Games"
+            android:textAlignment="center" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/imagebuttonProfile"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:background="#E4E4E4"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_person_30x30" />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/category_Horizontal_Scroll_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/searchLayout">
+
+
+    <LinearLayout
+        android:id="@+id/categoriesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/textviewFor_you"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For you"
+            android:textColor="@color/purple_700"
+            android:textSize="13sp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white" />
+
+        <Button
+            android:id="@+id/textviewTop_charts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top charts"
+            android:textSize="13sp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"/>
+
+        <Button
+            android:id="@+id/textviewChildren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Childer"
+            android:textSize="13sp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white" />
+
+        <Button
+            android:id="@+id/textviewCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categories"
+            android:textSize="13sp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white" />
+
+
+    </LinearLayout>
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:layout_below="@+id/category_Horizontal_Scroll_View">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <RelativeLayout
+                android:id="@+id/RecommendedRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/categoriesLayout"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp">
+
+                <TextView
+                    android:id="@+id/textviewRecommended_For_You"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Recommended for you"
+                    android:textColor="#424242"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/white"
+                    android:src="@drawable/ic_arrow_forward" />
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView_Recommend_Category_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RecommendedRelativeLayout">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_1"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_1"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_1"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_2"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_2"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_2"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_3"
+                            android:layout_width="115dp"
+
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_3"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_3"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_4"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_4"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_4"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_5"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_5"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_5"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_6"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_6"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_6"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_7"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_7"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_7"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_8"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_8"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_8"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_9"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_9"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_9"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_10"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_10"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_10"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_11"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_11"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_11"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_1.2"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_1.2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_1.2"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_1.3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_1.2"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_1.4"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_1.5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_1.4"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_1.6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_1.5"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_1_1.1"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_1_1.2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_1_1.1"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_1_1.3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_1_1.2"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:id="@+id/SuggestdRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/horizontalScrollView_Recommend_Category_1"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp">
+
+                <TextView
+                    android:id="@+id/textviewSuggestedAds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Ads . "
+                    android:textColor="#4A4A4A" />
+
+                <TextView
+                    android:id="@+id/textviewSuggested_For_You"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/textviewSuggestedAds"
+                    android:text="Suggested for you"
+                    android:textColor="#424242"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView_Suggested_Category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/SuggestdRelativeLayout">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_1_1"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_1_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_1_1"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_1_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_1_1"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_2_1"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_2_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_2_1"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_2_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_2_1"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_3_1"
+                            android:layout_width="115dp"
+
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_3_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_3_1"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_3_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_3_1"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_4_1"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_4_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_4_1"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_4_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_4_1"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_5_1"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_5_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_5_1"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_5_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_5_1"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_6_1"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_6_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_6_1"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_6_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_6_1"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:id="@+id/BasedOnYourRecentActivityRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/horizontalScrollView_Recommend_Category_1"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp">
+
+                <TextView
+                    android:id="@+id/textview_Based_On_Your_Recent_Activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Based On your Recent Activity"
+                    android:textColor="#424242"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView_Recent_Activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RecentActivityRelativeLayout">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_12"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_12"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_12"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_2_2"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_2_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_2_2"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_2_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_2_2"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_3_2"
+                            android:layout_width="115dp"
+
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_3_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_3_2"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_3_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_3_2"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_4_2"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_4_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_4_2"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_4_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_4_2"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_5_2"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_5_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_5_2"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_5_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_5_2"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_6_5"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_6_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_6_5"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_6_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_6_5"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:id="@+id/MusicAndAudioRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/horizontalScrollView_Suggested_Category_1"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp">
+
+                <TextView
+                    android:id="@+id/textview_Music_And_Audio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Music and Audio"
+                    android:textColor="#424242"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView_Music_And_Audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/MusicAndAudioRelativeLayout">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_14"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_14"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_14"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_2_4"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_2_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_2_4"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_2_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_2_4"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_3_4"
+                            android:layout_width="115dp"
+
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_3_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_3_4"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_3_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_3_4"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_4_4"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_4_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_4_4"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_4_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_4_4"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_5_4"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_5_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_5_4"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_5_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_5_4"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_6_4"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_6_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_6_4"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_6_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_6_4"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:id="@+id/Productivity_RelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/horizontalScrollView_Music_And_Audio"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp">
+
+                <TextView
+                    android:id="@+id/textview_Productivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Productivity"
+                    android:textColor="#424242"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView_Productivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Productivity_RelativeLayout">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_15"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_15"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_15"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_2_5"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_2_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_2_5"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_2_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_2_5"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_3_5"
+                            android:layout_width="115dp"
+
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_3_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_3_5"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_3_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_3_5"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_4_5"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_4_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_4_5"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_4_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_4_5"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_5_5"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_5_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_5_5"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_5_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_5_5"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/app_image_6_2"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:background="@color/purple_200"
+                            android:src="@mipmap/whatsapp_icon_340x340" />
+
+                        <TextView
+                            android:id="@+id/app_name_6_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_image_6_2"
+                            android:text="WhatsApp Business"
+                            android:textColor="#494848"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/app_rating_6_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/app_name_6_2"
+                            android:drawableEnd="@drawable/ic_star_10x10"
+                            android:text="4.2"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/relativelayout_Bottom_Category"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="#F3F3F3"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/gamesLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imageview_Games_Icon"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:background="#F3F3F3"
+                android:src="@drawable/ic_videogame_30x30" />
+
+            <TextView
+                android:id="@+id/textview_Games_Category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Games"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/appsLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="80dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imageview_Apps_Icon"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:background="#C4E5EF"
+                android:src="@drawable/ic_apps_30x30" />
+
+            <TextView
+                android:id="@+id/textview_Apps_Category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Apps"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
